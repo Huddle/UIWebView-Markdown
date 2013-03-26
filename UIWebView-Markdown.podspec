@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage =     'https://github.com/ootake/NSDate-TimeDifference/'
   s.author   =     { 'Dan Hough' => 'daniel.hough@gmail.com' }
   s.source   =     { :git => 'https://github.com/huddle/UIWebView-Markdown.git' , :tag => '1.0.0' }
-  s.source_files = 'UIWebView+Markdown/UIWebView+Markdown.{h,m}'
+  s.source_files = 'UIWebView+Markdown.{h,m}'
   s.platform =     :ios, '0.6'
   s.requires_arc = true
   s.dependency     'sundown', '~> 0.1.0' 
