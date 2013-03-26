@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name     =     'UIWebView-Markdown'
   s.version  =     '1.0.0'
-  s.license  =     { :type => 'MIT', :file => 'license.txt' }
+  s.license  =     { :type => 'MIT' }
   s.summary  =     'Load Markdown in a UIWebView instead of HTML, and optionally specify a CSS Stylesheet using a string or using a CSS file.'
   s.homepage =     'https://github.com/Huddle/UIWebView-Markdown/'
   s.author   =     { 'Dan Hough' => 'daniel.hough@gmail.com' }
