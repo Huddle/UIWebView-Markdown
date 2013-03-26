@@ -9,17 +9,12 @@ This Category is so simple, your cat could use it. Want to load some Markdown on
 #import "MYSuperSimpleViewController.h"
 #import "UIWebView+Markdown.h"
 
-@interface MYSuperSimpleViewController ()
-
-@end
-
 @implementation MYSuperSimpleViewController
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-
-    [self.webView loadMarkdownString:@"# How to Write Markdown\n* Start with some bullet points\n* Crucially, you want to **emphasis** the _important_ points"];
+    [super viewDidLoad];
+    [self.webView loadMarkdownString:@"# How to Write Markdown\n* Start with some bullet points\n* Crucially, you want to **emphasis** the _important_ points"];
 }
 
 @end
