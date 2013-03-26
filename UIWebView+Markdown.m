@@ -1,6 +1,5 @@
 //
 //  UIWebView+Markdown.m
-//  Huddle Note
 //
 //  Created by Daniel Hough on 26/03/2013.
 //  Copyright (c) 2013 Huddle. All rights reserved.
