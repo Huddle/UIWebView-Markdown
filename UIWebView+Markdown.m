@@ -29,9 +29,9 @@
     NSString *fullHtmlPage;
     
     if (stylesheet) {
-        fullHtmlPage = [NSString stringWithFormat:@"<html><head><style type=\"text/css\">%@</style></head><body>%@</body></html>", stylesheet, htmlString];
+        fullHtmlPage = [NSString stringWithFormat:@"<html><head><meta name=\"viewport\" content=\"width=device-width\"><style type=\"text/css\">%@</style></head><body>%@</body></html>", stylesheet, htmlString];
     } else {
-        fullHtmlPage = [NSString stringWithFormat:@"<html><head><style type=\"text/css\">body { font-family:sans-serif; font-size:10pt; }</style></head><body>%@</body></html>", htmlString];
+        fullHtmlPage = [NSString stringWithFormat:@"<html><head><meta name=\"viewport\" content=\"width=device-width\"><style type=\"text/css\">body { font-family:sans-serif; font-size:10pt; }</style></head><body>%@</body></html>", htmlString];
     }
     
     [self loadHTMLString:fullHtmlPage baseURL:baseURL];
@@ -45,7 +45,7 @@
     
     NSString *htmlString = [SundownWrapper convertMarkdownString:markdown];
     
-    NSString *fullHtmlPage = [NSString stringWithFormat:@"<html><head><link rel=\"stylesheet\" href=\"%@\" /></head><body>%@</body></html>", stylesheetFilename, htmlString];
+    NSString *fullHtmlPage = [NSString stringWithFormat:@"<html><head><meta name=\"viewport\" content=\"width=device-width\"><link rel=\"stylesheet\" href=\"%@\" /></head><body>%@</body></html>", stylesheetFilename, htmlString];
     
     [self loadHTMLString:fullHtmlPage baseURL:baseURL];
 }
