@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author   =     { 'Dan Hough' => 'daniel.hough@gmail.com' }
   s.source   =     { :git => 'https://github.com/Huddle/UIWebView-Markdown.git' , :tag => '1.0.1' }
   s.source_files = 'UIWebView+Markdown.{h,m}'
-  s.platform =     :ios, '6.0'
+  s.platform =     :ios
   s.requires_arc = true
   s.dependency     'sundown', '~> 0.1.0' 
 end
