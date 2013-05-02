@@ -29,5 +29,9 @@
  You can specify a custom URL For the stylesheet, but if you don't, the default will be used, as before.
  */
 - (void)loadMarkdownString:(NSString *)markdown atBaseURL:(NSURL *)baseURL withStylesheetFile:(NSString *)stylesheetFilename;
+/**
+ Same as the one above, but need to provide an HTML string which has two placeholder tokens - one for the stylesheet, and one for the body content
+ */
+- (void)loadMarkdownString:(NSString *)markdown atBaseURL:(NSURL *)baseURL withStylesheetFile:(NSString *)stylesheetFilename andSurroundedByHTML:(NSString *)html;
 
 @end

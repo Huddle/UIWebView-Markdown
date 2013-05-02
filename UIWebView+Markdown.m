@@ -50,4 +50,20 @@
     [self loadHTMLString:fullHtmlPage baseURL:baseURL];
 }
 
+- (void)loadMarkdownString:(NSString *)markdown atBaseURL:(NSURL *)baseURL withStylesheetFile:(NSString *)stylesheetFilename andSurroundedByHTML:(NSString *)html {
+    if (!baseURL) {
+        NSString *path = [[NSBundle mainBundle] bundlePath];
+        baseURL = [NSURL fileURLWithPath:path];
+    }
+    
+    html = [html stringByReplacingOccurrencesOfString:@"{markdown}" withString:@"%@"];
+    html = [html stringByReplacingOccurrencesOfString:@"{stylesheetName}" withString:@"%@"];
+    
+    NSString *htmlString = [SundownWrapper convertMarkdownString:markdown];
+    
+    NSString *fullHtmlPage = [NSString stringWithFormat:html, stylesheetFilename, htmlString];
+    
+    [self loadHTMLString:fullHtmlPage baseURL:baseURL];
+}
+
 @end
